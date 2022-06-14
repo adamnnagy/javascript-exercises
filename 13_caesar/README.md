@@ -31,3 +31,14 @@ negative numbers should work as well:
 ```javascript
 caesar('Mjqqt, Btwqi!', -5) // returns 'Hello, World!'
 ```
+
+
+# solve
+
+## using UTF-16 encoding and String.prototype.charCodeAt()
+UTF-16 already maps characters to numbers
+how to shift? 
+- get the character code e.g. 65 (="A")
+- mod 26 the shift (so it stays inside the alphabet range, and full circle turns are counted as such)
+- add or subtract the shift value - 65 + 5
+- mod 26 this value so it doesn't roll over"Z
